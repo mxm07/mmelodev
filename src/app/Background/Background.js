@@ -6,6 +6,9 @@ const Background = () => {
   const canvas = useRef()
   const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
   const renderer = new THREE.WebGLRenderer()
+  
+  const delta = useRef(0.01)
+  const speedFactor = 0.25
 
   useEffect(() => {
     const scene = new THREE.Scene()
@@ -17,7 +20,7 @@ const Background = () => {
     const cubes = []
 
     const createCube = () => {
-      const randSize = Math.floor(Math.random() * 4) + 2
+      const randSize = Math.floor(Math.random() * 6) + 2
       const randColor = Math.floor(Math.random() * 8) + 1
       const color = parseInt(`${20 + randColor}${20 + randColor}${20 + randColor}`, 16)
 
@@ -49,28 +52,31 @@ const Background = () => {
       createCube()
     }
 
-    const animate = () => {
-      requestAnimationFrame(animate)
-
+    const animate = (time) => {
+      var timeInSeconds = time * 0.001;
+      var deltaTimeInSeconds = (timeInSeconds - delta.current) || 0.01
+      delta.current = timeInSeconds;
+   
       cubes.forEach(({ cube, shrink }, i) => {
         cube.material.opacity += 0.05
-
-        cube.rotation.x += 0.01 / shrink
-        cube.rotation.y += 0.01 / shrink
-
-        cube.scale.x -= (0.01 * shrink)
-        cube.scale.y -= (0.01 * shrink)
-        cube.scale.z -= (0.01 * shrink)
-
+        
+        cube.rotation.x += (deltaTimeInSeconds / shrink) * speedFactor
+        cube.rotation.y += (deltaTimeInSeconds / shrink) * speedFactor
+        
+        cube.scale.x -= (deltaTimeInSeconds * shrink) * speedFactor
+        cube.scale.y -= (deltaTimeInSeconds * shrink) * speedFactor
+        cube.scale.z -= (deltaTimeInSeconds * shrink) * speedFactor
+        
         if (cube.scale.x < 0 || cube.scale.y < 0 || cube.scale.z < 0) {
           cubes.splice(i, 1)
           scene.remove(cube)
-
+          
           createCube()
         }
       })
-
+      
       renderer.render(scene, camera)
+      requestAnimationFrame(animate)
     }
     
     animate()
