@@ -1,0 +1,54 @@
+@import "../../partials.scss";
+
+.home {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &__name {
+    color: $default-text;
+    font-family: $font;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  &__desc {
+    color: $sub-text;
+    font-family: $font;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  &__social-bar {
+    &__icon {
+      width: 25px;
+      height: 25px;
+      display: inline;
+      margin: 0 5px;
+      pointer-events: none;
+    }
+  }
+
+  span { 
+    color: $sub-text; 
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  a:link { color: $anchor; }
+  a:visited { color: $anchor-visited; }
+  a:hover { color: $anchor-hover; }
+  a:active { color: $anchor-active; }
+
+  .nav { 
+    text-align: center;
+
+    a:link { color: $nav; }
+    a:visited { color: $nav-visited; }
+    a:hover { color: $nav-hover; }
+    a:active { color: $nav-active; }
+  }
+}

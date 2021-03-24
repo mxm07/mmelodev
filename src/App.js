@@ -1,19 +1,16 @@
 import React from 'react'
-import Home from './Home'
+import Home from './app/Home'
+import Background from './app/Background'
 
 import './App.scss'
 
-const App = ({ setContent, appSize }) => {
+const App = () => {
   return (
     <div className="app-wrapper">
-      <div className="anim-wrapper">
-        <div 
-          ref={setContent} 
-          style={{ width: appSize, height: appSize }}
-          className="app"
-        >
-          <Home />
-        </div> 
+      <Background />
+      
+      <div className="app">
+        <Home />
       </div>
     </div>
   )

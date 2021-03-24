@@ -1,0 +1,10 @@
+@import "../../_partials.scss";
+
+.linkbar {
+  a {
+    color: $anchor;
+  }
+  &__divider {
+    margin: 0 10px;
+  }
+}

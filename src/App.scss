@@ -17,20 +17,26 @@ body, html, #root {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: $bg;
+  background-color: rgba(0,0,0,0);
 }
+
 .app {
-  background-color: $fg;
-  border: 1px solid $sub-text;
-  
-  padding: 20px;
+  width: 800px;
+
+  transition: height 2s;
 }
 
 p, a, h1, h2, h3, h4, h5 {
-  font-family: monospace;
+  font-family: $font;
 }
 
-a:link { color: $anchor; }
-a:visited { color: $anchor-visited; }
-a:hover { color: $anchor-hover; }
-a:active { color: $anchor-active; }
+h1 {
+  font-size: 2em;
+}
+h2 {
+  font-size: 1.75em;
+}
+p {
+  font-size: 1.25em;
+  line-height: 1.5;
+}
