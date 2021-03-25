@@ -10,6 +10,10 @@ body, html, #root {
   height: 100%;
 }
 
+#root, .app-wrapper {
+  background-color: $bg;
+}
+
 .app-wrapper {
   width: 100%;
   height: 100%;
@@ -17,12 +21,12 @@ body, html, #root {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0,0,0,0);
 }
 
 .app {
   width: 800px;
 
+  z-index: 1;
   transition: height 2s;
 }
 
