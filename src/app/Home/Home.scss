@@ -2,6 +2,8 @@
 
 .home {
   margin-top: 50px;
+  padding: 0 20px;
+  
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -28,27 +30,5 @@
       margin: 0 5px;
       pointer-events: none;
     }
-  }
-
-  span { 
-    color: $sub-text; 
-  }
-
-  a {
-    text-decoration: none;
-  }
-
-  a:link { color: $anchor; }
-  a:visited { color: $anchor-visited; }
-  a:hover { color: $anchor-hover; }
-  a:active { color: $anchor-active; }
-
-  .nav { 
-    text-align: center;
-
-    a:link { color: $nav; }
-    a:visited { color: $nav-visited; }
-    a:hover { color: $nav-hover; }
-    a:active { color: $nav-active; }
   }
 }

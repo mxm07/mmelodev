@@ -3,4 +3,8 @@
 .notfound {
   padding: 30px;
   color: $sub-text;
+
+  &__title {
+    text-align: center;
+  }
 }

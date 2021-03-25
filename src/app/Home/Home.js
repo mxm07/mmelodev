@@ -15,7 +15,7 @@ import './Home.scss'
 
 const Home = () => (
   <Switch>
-    <Route path="/(about|projects|other|)">
+    <Route exact path="/">
       <div className="home">
         <h1 className="home__name">{ HOME_NAME }</h1>
         <p className="home__desc">{ HOME_DESC }</p>

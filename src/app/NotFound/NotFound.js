@@ -1,10 +1,10 @@
 import React from 'react'
-import { NOTFOUND } from 'Constants'
+import { NOTFOUND_TITLE } from 'Constants'
 import './NotFound.scss'
 
 const NotFound = () => (
   <div className="notfound">
-    { NOTFOUND }
+    <h1 className="notfound__title">{ NOTFOUND_TITLE }</h1>
   </div>
 )
 

@@ -40,3 +40,18 @@ p {
   font-size: 1.25em;
   line-height: 1.5;
 }
+
+
+span { 
+  color: $sub-text; 
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link { color: $anchor; }
+a:visited { color: $anchor-visited; }
+a:hover { color: $anchor-hover; }
+a:active { color: $anchor-active; }
+
