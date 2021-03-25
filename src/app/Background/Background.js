@@ -9,15 +9,15 @@ const Background = () => {
   
   const delta = useRef(0.01)
   const speedFactor = 0.25
+  const cubes = []
 
   useEffect(() => {
     const scene = new THREE.Scene()
-    scene.background = new THREE.Color( 0x212121 )
+    scene.background = new THREE.Color(0x212121)
     renderer.setSize(window.innerWidth, window.innerHeight)
     canvas.current.appendChild(renderer.domElement)
     camera.position.z = 5
 
-    const cubes = []
 
     const createCube = () => {
       const randSize = Math.floor(Math.random() * 6) + 2
@@ -80,9 +80,9 @@ const Background = () => {
     }
     
     animate()
-  }, [camera, renderer])
+  }, [camera, renderer, cubes])
 
-
+  
   useEffect(() => {
     const onWindowResize = () => {
         camera.aspect = window.innerWidth / window.innerHeight
@@ -93,6 +93,7 @@ const Background = () => {
     window.addEventListener('resize', onWindowResize, false)
   }, [camera, renderer])
 
+  
   return <div className="background" ref={ canvas } />
 }
 
