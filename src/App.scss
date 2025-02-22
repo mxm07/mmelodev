@@ -5,12 +5,15 @@
   padding: 0;
 }
 
-body, html, #root {
+body,
+html,
+#root {
   width: 100%;
   height: 100%;
 }
 
-#root, .app-wrapper {
+#root,
+.app-wrapper {
   background-color: $bg;
 }
 
@@ -30,7 +33,13 @@ body, html, #root {
   transition: height 2s;
 }
 
-p, a, h1, h2, h3, h4, h5 {
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: $font;
 }
 
@@ -45,17 +54,23 @@ p {
   line-height: 1.5;
 }
 
-
-span { 
-  color: $sub-text; 
+span {
+  color: $sub-text;
 }
 
 a {
   text-decoration: none;
 }
 
-a:link { color: $anchor; }
-a:visited { color: $anchor-visited; }
-a:hover { color: $anchor-hover; }
-a:active { color: $anchor-active; }
-
+a:link {
+  color: $anchor;
+}
+a:visited {
+  color: $anchor-visited;
+}
+a:hover {
+  color: $anchor-hover;
+}
+a:active {
+  color: $anchor-active;
+}
