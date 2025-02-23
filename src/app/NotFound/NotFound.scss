@@ -1,4 +1,4 @@
-@import "../../partials.scss";
+@use '../../partials' as *;
 
 .notfound {
   padding: 30px;
