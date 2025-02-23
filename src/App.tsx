@@ -1,10 +1,9 @@
-import React from "react";
-import Home from "./app/Home";
-import Background from "./app/Background";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from './app/Home'
+import Background from './app/Background'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-import "./App.scss";
-import NotFound from "./app/NotFound";
+import './App.scss'
+import NotFound from './app/NotFound'
 
 function App() {
   return (
@@ -20,7 +19,7 @@ function App() {
         </BrowserRouter>
       </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

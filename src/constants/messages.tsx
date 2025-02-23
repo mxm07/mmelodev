@@ -1,5 +1,3 @@
-import React from 'react'
-
 export const HOME_NAME = 'max melo'
 export const HOME_DESC = (
   <>
